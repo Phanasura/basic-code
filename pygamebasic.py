@@ -24,14 +24,23 @@ ORANGE = (255, 125, 25)
 GRAPE = (100, 25, 125)
 GRASS = (55, 155, 65)
 
+font = pygame.font.SysFont('sans', 40)
+font_small = pygame.font.SysFont('sans', 10)
+
 while running:
     clock.tick(60)
 
     screen.fill(BACKGROUND)
 
+    #create mouse position
+    mx, my = pygame.mouse.get_pos()
+    if 0 <= mx <= 1200 and 0 <= my <= 700:
+        text_mouse = font_small.render("(" + str(mx) + "," + str(my) + ")", True, BLACK)
+        screen.blit(text_mouse, (mx+10, my))
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            print("-----------------------------------------------------------------------------------------------------------------------------------------------------")
+            print(
+                "-----------------------------------------------------------------------------------------------------------------------------------------------------")
             running = False
 
     pygame.display.flip()

@@ -1,0 +1,45 @@
+-clone
+-init đưa lên ide
+
+ctrl+shift+~
+
+-------------------
+
+-chọn nhánh checkout
+git branch
+
+-xem file đã thay đổi có lưu chưa (có:xanh lá, chưa:đỏ)
+git status
+
+-thêm một nhanh khác
+git checkout -b "tênvdtonghop"
+
+-xem lại git branch để xem mình đang ở nhánh nào (màu xanh lá)
+
+-thêm code
+git add . 
+
+-kiểm tra lại
+git status
+
+-coi lại tên người config
+git config user.name
+
+-coi lại email người config
+git config user.email
+
+-commit tin nhắn 
+git commit -m "Nội dung tiêu đề tin nhắn"
+
+-coi lại mình ở nhánh nào?
+git branch --show
+
+-push code với origin là tên respontory
+git push origin "vdtonghop"
+
+-------------------------------
+quay lại nhánh cũ
+git checkout master
+
+quay lại cái mới
+git pull origin master
